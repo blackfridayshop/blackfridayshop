@@ -451,5 +451,27 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.addEventListener('input', renderCatalog);
       renderCatalog();
     }
+
+    // --- Кнопка меню для мобильных устройств ---
+    const menuToggle = document.getElementById('menu-toggle');
+    if (menuToggle && header) {
+        let menuOpened = false;
+        menuToggle.addEventListener('click', () => {
+            if (!menuOpened) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+                menuOpened = true;
+            } else {
+                header.classList.remove('scroll-up');
+                menuOpened = false;
+            }
+        });
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 700 && menuOpened && window.pageYOffset > 0) {
+                header.classList.remove('scroll-up');
+                menuOpened = false;
+            }
+        });
+    }
   })();
 }); 
