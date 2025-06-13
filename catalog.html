@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — Black Friday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo" style="text-decoration:none;">
+                <span class="logo-icon"><i class="fas fa-tag" style="color:#ff0000;margin-right:8px;"></i></span>
+                <span style="font-weight:900;letter-spacing:2px;"><span style="color:#fff;">BLACK</span> <span style="color:#ff0000;">FRIDAY</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="catalog.html" id="catalog-btn" data-i18n="catalog" style="color:#ff0000;">Каталог</a>
+                <a href="index.html#about" data-i18n="about">О нас</a>
+                <a href="index.html#contacts" data-i18n="contacts">Контакты</a>
+                <a href="index.html#location" data-i18n="how_to_find">Как найти</a>
+            </div>
+        </nav>
+    </header>
+    <div class="catalog-layout">
+        <aside class="catalog-sidebar">
+            <ul class="sidebar-categories">
+                <li class="cat-item cat-item-all no-wrap active" data-cat="all" data-i18n="cat_all"><i class="fas fa-th"></i> <span class="cat-label-text">Все товары</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="headphones"><i class="fas fa-headphones"></i> <span class="cat-label-text">Наушники</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="tv"><i class="fas fa-tv"></i> <span class="cat-label-text">Телевизор</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="robotvacuum"><i class="fas fa-robot"></i> <span class="cat-label-text">Робот пылесос</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="mouse"><i class="fas fa-computer-mouse"></i> <span class="cat-label-text">Компьютерная мышка</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="smartwatch"><i class="fas fa-watch"></i> <span class="cat-label-text">Умные часы</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="appliances"><i class="fas fa-blender"></i> <span class="cat-label-text">Бытовая техника</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+                <li class="cat-item" data-cat="consoles" data-i18n="cat_consoles"><i class="fas fa-gamepad"></i> <span class="cat-label-text">Консоли</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+            </ul>
+        </aside>
+        <main class="catalog-main-content">
+            <div class="catalog-controls-line">
+                <input type="text" id="catalog-search" placeholder="Поиск по названию..." data-i18n-placeholder="search_placeholder" />
+            </div>
+            <div class="catalog-list-page" id="catalog-list-page">
+                <!-- Товары будут рендериться через JS -->
+            </div>
+        </main>
+    </div>
+    <!-- Модальное окно заказа -->
+    <div class="modal" id="order-modal">
+        <div class="modal-content order-modal-content">
+            <span class="modal-close" id="close-order">&times;</span>
+            <h2 class="order-modal-title">Оформление заказа</h2>
+            <div class="order-product-preview">
+                <img id="order-product-img" src="" alt="Товар" />
+                <div>
+                    <div id="order-product-title"></div>
+                    <div><span id="order-old-price"></span> <span id="order-new-price"></span></div>
+                </div>
+            </div>
+            <form id="order-form" action="https://formspree.io/f/xanjoznb" method="POST">
+                <div class="order-form-row">
+                    <input type="text" name="fio" placeholder="ФИО" required />
+                    <input type="tel" name="phone" placeholder="Номер телефона" required />
+                </div>
+                <div class="order-form-row">
+                    <input type="text" name="address" placeholder="Адрес доставки" required />
+                    <input type="email" name="email" placeholder="Почта" required />
+                </div>
+                <input type="hidden" name="_subject" value="Новый заказ с сайта">
+                <button type="submit" class="order-submit-btn" id="order-submit-btn">Оформить заказ</button>
+            </form>
+            <div id="order-success" style="display:none;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

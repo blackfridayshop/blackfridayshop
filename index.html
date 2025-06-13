@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Ваш магазин электроники</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>body { visibility: hidden; }</style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo" style="text-decoration:none;">
+                <span class="logo-icon"><i class="fas fa-tag" style="color:#ff0000;margin-right:8px;"></i></span>
+                <span style="font-weight:900;letter-spacing:2px;"><span style="color:#fff;" data-i18n="logo_black">Black</span> <span style="color:#ff0000;" data-i18n="logo_friday">Friday</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="catalog.html" id="catalog-btn" data-i18n="catalog">Каталог</a>
+                <a href="#about" data-i18n="about">О нас</a>
+                <a href="#contacts" data-i18n="contacts">Контакты</a>
+                <a href="#location" data-i18n="how_to_find">Как найти</a>
+            </div>
+            <div class="lang-dropdown">
+                <button class="lang-current" id="lang-current-btn">🇷🇺 Русский ▼</button>
+                <div class="lang-list" id="lang-list" style="display:none;">
+                    <button data-lang="en">🇬🇧 English</button>
+                    <button data-lang="nl">🇳🇱 Nederlands</button>
+                    <button data-lang="de">🇩🇪 Deutsch</button>
+                    <button data-lang="fr">🇫🇷 Français</button>
+                    <button data-lang="it">🇮🇹 Italiano</button>
+                    <button data-lang="es">🇪🇸 Español</button>
+                    <button data-lang="pt">🇵🇹 Português</button>
+                    <button data-lang="pl">🇵🇱 Polski</button>
+                    <button data-lang="ru">🇷🇺 Русский</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 style="white-space:nowrap;"><span data-i18n="welcome">Добро пожаловать в</span> <span style="color:#fff;" data-i18n="logo_black">Black</span> <span style="color:#ff0000;" data-i18n="logo_friday">Friday</span></h1>
+                <div class="bf-badge" style="position:relative;">
+                    <i class="fas fa-bolt"></i> <span style="color:#fff;" data-i18n="logo_black">Black</span> <span style="color:#ff0000;font-weight:900;" data-i18n="logo_friday">Friday</span> — <span data-i18n="discounts">Скидки до <b>70%</b></span>
+                </div>
+                <p data-i18n="hero_subtitle">Ваш надежный партнер в мире электроники</p>
+                <a href="#contacts" class="cta-button" data-i18n="contact_us">Связаться с нами</a>
+            </div>
+        </section>
+
+        <section class="bf-products">
+            <div class="product-card">
+                <div class="product-img" style="display: flex; align-items: center; justify-content: center; background: #232323;">
+                    <img src="secret.box.png" alt="Black Friday Secret Box" style="width:100%;height:100%;object-fit:contain;" />
+                </div>
+                <span class="hot-badge-product">🔥 HOT</span>
+                <div class="product-info">
+                    <div class="product-title">Secret Box</div>
+                    <div class="product-prices">
+                        <span class="old-price">250€</span>
+                        <span class="new-price">200€</span>
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <button class="order-btn main-order-btn" data-title="Secret Box" data-old="250€" data-new="200€" data-img="secret.box.png" data-i18n="order_btn">Заказать</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-i18n="about_title">О нашем магазине</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-store"></i>
+                    <h3 data-i18n="wide_choice">Широкий выбор</h3>
+                    <p data-i18n="wide_choice_desc">Большой ассортимент электроники и аксессуаров</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3 data-i18n="consultation">Профессиональная консультация</h3>
+                    <p data-i18n="consultation_desc">Поможем выбрать именно то, что вам нужно</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-truck-fast"></i>
+                    <h3 data-i18n="fast_delivery">Молниеносная доставка</h3>
+                    <p data-i18n="fast_delivery_desc">Доставим ваш заказ в день обращения или на следующий день по всей стране!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <h2 data-i18n="contacts_title">Наши контакты</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3 data-i18n="phone">Телефон</h3>
+                    <p><a href="tel:+31614914909" class="contact-link">+31614914909</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3 data-i18n="email">Email</h3>
+                    <p><a href="mailto:info@blackfriday.com" class="contact-link">info@blackfriday.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-i18n="work_time">Режим работы</h3>
+                    <p>Пн-Вс: 10:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-button"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-button"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-button"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-button"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section id="location" class="location">
+            <h2 data-i18n="location_title">Как нас найти</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps?q=Jan+van+der+Heydenstraat+26a&output=embed"
+                    width="100%" height="100%" style="border:0; border-radius:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 <span data-i18n="logo_black">Black</span> <span data-i18n="logo_friday">Friday</span>. <span data-i18n="rights">Все права защищены.</span></p>
+    </footer>
+
+    <!-- Модальное окно каталога -->
+    <div class="modal" id="catalog-modal">
+        <div class="modal-content catalog-modal-content">
+            <span class="modal-close" id="close-catalog">&times;</span>
+            <h2>Каталог товаров</h2>
+            <div class="catalog-list">
+                <!-- Товары удалены -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно заказа -->
+    <div class="modal" id="order-modal">
+        <div class="modal-content order-modal-content">
+            <span class="modal-close" id="close-order">&times;</span>
+            <h2 class="order-modal-title" data-i18n="order_title">Оформление заказа</h2>
+            <div class="order-product-preview">
+                <img id="order-product-img" src="" alt="Товар" />
+                <div>
+                    <div id="order-product-title"></div>
+                    <div><span id="order-old-price"></span> <span id="order-new-price"></span></div>
+                </div>
+            </div>
+            <form id="order-form">
+                <div class="order-form-row">
+                    <input type="text" name="fio" placeholder="ФИО" required data-i18n-placeholder="order_fio" />
+                    <input type="tel" name="phone" placeholder="Номер телефона" required data-i18n-placeholder="order_phone" />
+                </div>
+                <div class="order-form-row">
+                    <input type="text" name="address" placeholder="Адрес доставки" required data-i18n-placeholder="order_address" />
+                    <input type="email" name="email" placeholder="Почта" required data-i18n-placeholder="order_email" />
+                </div>
+                <label class="order-switch-label">
+                    <span class="cat-switch order-switch"><span class="switch-slider"></span><input type="checkbox" id="order-agree" style="display:none;" /></span>
+                    <span data-i18n="order_agree">Соглашаюсь на обработку персональных данных</span>
+                </label>
+                <button type="submit" class="order-submit-btn" id="order-submit-btn" disabled data-i18n="order_submit">Оформить заказ</button>
+            </form>
+            <div id="order-success" style="display:none;"></div>
+        </div>
+    </div>
+</body>
+</html> 
