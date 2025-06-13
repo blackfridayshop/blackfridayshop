@@ -19,18 +19,17 @@ let lastScroll = 0;
 if (header) {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+        const isMobile = window.innerWidth <= 700;
         if (currentScroll <= 0) {
             header.classList.remove('scroll-up');
             return;
         }
-        
         if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
             // Scroll Down
             header.classList.remove('scroll-up');
             header.classList.add('scroll-down');
-        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Scroll Up
+        } else if (!isMobile && currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            // Scroll Up (только на десктопе)
             header.classList.remove('scroll-down');
             header.classList.add('scroll-up');
         }
