@@ -217,10 +217,14 @@ function setLang(lang) {
     // Сохраняем текущую активную категорию
     let currentActiveCat = document.querySelector('.cat-item.active')?.getAttribute('data-cat') || 'all';
     sidebar.innerHTML = `
-      <li class="cat-item cat-item-all no-wrap" data-cat="all" data-i18n="cat_all"><i class="fas fa-th"></i> <span class="cat-label-text">${dict.cat_all || ''}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
-      <li class="cat-item" data-cat="phones" data-i18n="cat_phones"><i class="fas fa-mobile-alt"></i> <span class="cat-label-text">${dict.cat_phones || ''}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
-      <li class="cat-item" data-cat="laptops" data-i18n="cat_laptops"><i class="fas fa-laptop"></i> <span class="cat-label-text">${dict.cat_laptops || ''}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
-      <li class="cat-item" data-cat="consoles" data-i18n="cat_consoles"><i class="fas fa-gamepad"></i> <span class="cat-label-text">${dict.cat_consoles || ''}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item cat-item-all no-wrap" data-cat="all" data-i18n="cat_all"><i class="fas fa-th"></i> <span class="cat-label-text">${dict.cat_all || 'Все товары'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="headphones"><i class="fas fa-headphones"></i> <span class="cat-label-text">${dict.cat_headphones || 'Наушники'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="tv"><i class="fas fa-tv"></i> <span class="cat-label-text">${dict.cat_tv || 'Телевизор'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="robotvacuum"><i class="fas fa-robot"></i> <span class="cat-label-text">${dict.cat_robotvacuum || 'Робот пылесос'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="mouse"><i class="fas fa-computer-mouse"></i> <span class="cat-label-text">${dict.cat_mouse || 'Компьютерная мышка'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="smartwatch"><i class="fas fa-watch"></i> <span class="cat-label-text">${dict.cat_smartwatch || 'Умные часы'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="appliances"><i class="fas fa-blender"></i> <span class="cat-label-text">${dict.cat_appliances || 'Бытовая техника'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
+      <li class="cat-item" data-cat="consoles"><i class="fas fa-gamepad"></i> <span class="cat-label-text">${dict.cat_consoles || 'Консоли'}</span> <span class="cat-switch"><span class="switch-slider"></span></span></li>
     `;
     // Навешиваем обработчики заново
     const sidebarCats = document.querySelectorAll('.cat-item');
