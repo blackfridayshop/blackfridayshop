@@ -138,10 +138,10 @@ if (mainOrderBtns && orderModal) {
 
 // --- Мультиязычность с выпадающим переключателем ---
 const langNames = {
-  en: 'English', nl: 'Nederlands', de: 'Deutsch', fr: 'Français', it: 'Italiano', es: 'Español', pt: 'Português', pl: 'Polski', ru: 'Русский'
+  en: 'English', nl: 'Nederlands', de: 'Deutsch', fr: 'Français', it: 'Italiano', es: 'Español', pt: 'Português', pl: 'Polski', ru: 'Русский', ar: 'العربية', tr: 'Türkçe', ma: 'Darija'
 };
 const langFlags = {
-  en: '🇬🇧', nl: '🇳🇱', de: '🇩🇪', fr: '🇫🇷', it: '🇮🇹', es: '🇪🇸', pt: '🇵🇹', pl: '🇵🇱', ru: '🇷🇺'
+  en: '🇬🇧', nl: '🇳🇱', de: '🇩🇪', fr: '🇫🇷', it: '🇮🇹', es: '🇪🇸', pt: '🇵🇹', pl: '🇵🇱', ru: '🇷🇺', ar: '��🇪', tr: '🇹🇷', ma: '🇩🇯'
 };
 const supportedLangs = Object.keys(langNames);
 

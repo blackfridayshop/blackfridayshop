@@ -39,5 +39,11 @@
   "search_placeholder": "Buscar por nombre...",
   "order_success_title": "¡Gracias por su pedido!",
   "order_success_desc": "Nuestro gerente se pondrá en contacto con usted pronto.",
-  "order_agree": "Acepto el tratamiento de datos personales"
+  "order_agree": "Acepto el tratamiento de datos personales",
+  "cat_headphones": "Auriculares",
+  "cat_tv": "Televisor",
+  "cat_robotvacuum": "Aspiradora robot",
+  "cat_mouse": "Ratón de ordenador",
+  "cat_smartwatch": "Reloj inteligente",
+  "cat_appliances": "Electrodomésticos"
 } 

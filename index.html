@@ -35,6 +35,9 @@
                     <button data-lang="pt">🇵🇹 Português</button>
                     <button data-lang="pl">🇵🇱 Polski</button>
                     <button data-lang="ru">🇷🇺 Русский</button>
+                    <button data-lang="ar">🇪🇬 العربية</button>
+                    <button data-lang="tr">🇹🇷 Türkçe</button>
+                    <button data-lang="ma">��🇿 Darija</button>
                 </div>
             </div>
         </nav>
@@ -111,7 +114,6 @@
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" class="social-button"><i class="fab fa-vk"></i></a>
                 <a href="#" class="social-button"><i class="fab fa-telegram"></i></a>
                 <a href="#" class="social-button"><i class="fab fa-whatsapp"></i></a>
                 <a href="#" class="social-button"><i class="fab fa-instagram"></i></a>
@@ -120,11 +122,12 @@
 
         <section id="location" class="location">
             <h2 data-i18n="location_title">Как нас найти</h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps?q=Jan+van+der+Heydenstraat+26a&output=embed"
-                    width="100%" height="100%" style="border:0; border-radius:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="map-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2em 0;">
+                <div class="contact-address" style="font-size:1.3em; margin-bottom: 1em;">Jan van der Heydenstraat 26a</div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Jan+van+der+Heydenstraat+26a" target="_blank" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <img src="images/google-maps.png" alt="Google Maps" style="width:48px;height:48px; margin-bottom: 0.3em;" />
+                    <span style="color:#ff0000; font-size:1em;">Построить маршрут</span>
+                </a>
             </div>
         </section>
     </main>
